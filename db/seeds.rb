@@ -3,7 +3,7 @@ require_relative '../config/environment.rb'
 require 'csv'
 
 
-@deck = Deck.create(deck_name: 'Capitals')
+@deck = Deck.create(name: 'Capitals')
 
 CSV.foreach('db/capital_flashcards.csv', headers: true) do |line|
   Card.create(deck_id: @deck.id, question: line['State'], answer: line['Capital'], point_value: 1)
