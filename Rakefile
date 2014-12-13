@@ -121,7 +121,7 @@ namespace :db do
   end
 
   desc "Drop Create and Migrate yo DB"
-  task :raj_cat => ["db:drop", "db:create", "db:migrate", "db:seed"]
+  task :yolo => ["db:drop", "db:create", "db:migrate", "db:seed"]
 
   desc "Returns the current schema version number"
   task :version do

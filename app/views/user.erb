@@ -1,1 +1,4 @@
-HEllo
+<%@decks.each do |deck|%>
+
+		<a href = "/users/#{@user.id}/decks/#{deck.id}"> <%=deck.name%> </a>
+<%end%>

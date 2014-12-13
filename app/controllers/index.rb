@@ -12,11 +12,21 @@ post '/login' do
 		session[:user_id] = @user.id
 		redirect "users/#{@user.id}"
 	else
+
 		redirect '/login'
 	end
 end
 
 get '/users/:user_id' do
-
+	@user = current_user
+	@decks = Deck.all 
 	erb :user 
+end
+
+get '/users/:user_id/decks/:deck_id' do
+	@user = current_user
+	@decks = Deck.all
+
+	erb :round
+
 end

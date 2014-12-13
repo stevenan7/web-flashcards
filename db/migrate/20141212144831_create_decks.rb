@@ -1,7 +1,7 @@
 class CreateDecks < ActiveRecord::Migration
   def change
     create_table :decks do |t|
-      t.string   :deck_name
+      t.string   :name
 
       t.timestamps
     end
