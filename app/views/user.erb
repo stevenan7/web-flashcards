@@ -1,4 +1,12 @@
+<div> Hello <%=@user.name%> </div>
+<div>
 <%@decks.each do |deck|%>
 
-		<a href = "/users/#{@user.id}/decks/#{deck.id}"> <%=deck.name%> </a>
+		<a href = "/users/<%=@user.id%>/decks/<%=deck.id%>"> <%=deck.name%> </a>
+
+
 <%end%>
+</div>
+<div>
+<a class='button' href='/users/:user_id/logout'> Log Out!</a>
+</div>
