@@ -17,10 +17,15 @@ post '/login' do
 	end
 end
 
+get '/users/:user_id/logout' do
+	session.clear
+	redirect '/'
+end
+
 get '/users/:user_id' do
 	@user = current_user
-	@decks = Deck.all 
-	erb :user 
+	@decks = Deck.all
+	erb :user
 end
 
 get '/users/:user_id/decks/:deck_id' do
