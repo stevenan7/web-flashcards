@@ -2,6 +2,15 @@ get'/' do
   erb :'/index'
 end
 
+get '/register' do 
+  erb :'/register'
+end
+
+post '/register' do 
+  #build logic to allow users to register
+  #@user.create
+end
+
 get '/login' do
   erb :'/login'
 end
@@ -12,7 +21,6 @@ post '/login' do
 		session[:user_id] = @user.id
 		redirect "users/#{@user.id}"
 	else
-
 		redirect '/login'
 	end
 end
